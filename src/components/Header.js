@@ -15,6 +15,7 @@ class Header extends HTMLElement {
                 margin: 0;
                 height: 40px;
                 font-size: 20px;
+                box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
             ">
                 <p>My App</p>
             </header>

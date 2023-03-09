@@ -2,7 +2,6 @@ class Content extends HTMLElement {
     constructor() {
         super();
         this.data = [];
-        console.log(this.data);
     }
 
     async setData() {
@@ -11,7 +10,6 @@ class Content extends HTMLElement {
         );
         const data = await response.json();
         this.data = data;
-        console.log(this.data);
     }
 
     async connectedCallback() {
@@ -26,14 +24,13 @@ class Content extends HTMLElement {
                 <div id="content">
                     ${this.data
                         .map((item) => {
-                            console.log(item);
                             return `
-                            <div>
-                                <b>${item.title}</b>
-                                <p>${item.body}</p>
-                                <hr>
-                            </div>
-                        `;
+                                <div>
+                                    <b>${item.title}</b>
+                                    <p>${item.body}</p>
+                                    <hr>
+                                </div>
+                            `;
                         })
                         .join("")}
                 </div>
