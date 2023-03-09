@@ -1,6 +1,7 @@
 class Footer extends HTMLElement {
     constructor() {
         super();
+        this.message = this.getAttribute("message") || "Footer";
     }
 
     connectedCallback() {
@@ -15,7 +16,7 @@ class Footer extends HTMLElement {
                 box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.1);
             "
         >
-            <p>footer</p>
+            <p>${this.message}</p>
         </footer>
         `;
     }
