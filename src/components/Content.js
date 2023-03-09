@@ -17,7 +17,6 @@ class Content extends HTMLElement {
 
         this.innerHTML = `
             <div style="
-                margin-top: 40px;
                 padding: 10px;
             ">
                 <h1>Content</h1>
